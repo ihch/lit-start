@@ -37,10 +37,6 @@
   "description": "Webcomponent lit-start following open-wc recommendations",
   "author": "lit-start",
   "license": "MIT",
-  "dependencies": {
-    "lit-element": "^2.5.1",
-    "lit-html": "^1.4.1"
-  },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
     "extends": [
@@ -79,5 +75,8 @@
       "eslint --fix",
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "lit": "^2.0.0-rc.2"
   }
 }
