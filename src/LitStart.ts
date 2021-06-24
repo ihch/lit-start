@@ -1,33 +1,13 @@
-import { LitElement, html, property, customElement } from 'lit-element';
+import { LitElement, html } from 'lit';
+import { customElement } from 'lit/decorators.js';
+import './Counter.js';
 
-@customElement('po-pi')
-export class PoPi extends LitElement {
-  @property({ type: String }) name;
-
-  constructor(name: string) {
-    super();
-    this.name = name;
-  }
-
-  render() {
-    return html` <p>Hello, ${this.name}!</p> `;
-  }
-}
 
 @customElement('lit-start')
 export class LitStart extends LitElement {
   render() {
     return html`
-      <po-pi name="hitode"></po-pi>
-      <p>
-        🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p>
+      <counter-component name="hitode"></counter-component>
     `;
   }
 }
