@@ -33,11 +33,12 @@
     "start:build": "npm run build && web-dev-server --root-dir dist --app-index index.html --open --compatibility none",
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\""
   },
-  "name": "lit-start",
+  "name": "@ihch/lit-start",
   "version": "0.0.0",
   "description": "Webcomponent lit-start following open-wc recommendations",
-  "author": "lit-start",
+  "author": "ihch",
   "license": "MIT",
+  "repository": "git://github.com/ihch/lit-start.git",
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
     "extends": [
