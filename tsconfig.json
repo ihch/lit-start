@@ -11,6 +11,8 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "outDir": "out-tsc",
+    "declaration": true,
+    "declarationMap": true,
     "sourceMap": true,
     "inlineSources": true,
     "rootDir": "./",
