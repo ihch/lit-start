@@ -1,8 +1,8 @@
 import { ReactiveController, ReactiveControllerHost } from 'lit';
 
-
 export class CounterController implements ReactiveController {
   private host: ReactiveControllerHost;
+
   private _counter = 0;
 
   public get counter() {
@@ -10,7 +10,7 @@ export class CounterController implements ReactiveController {
   }
 
   constructor(host: ReactiveControllerHost, intialCount?: number) {
-    intialCount && this.setCounter(intialCount);
+    if (intialCount) this.setCounter(intialCount);
     this.host = host;
     this.host.addController(this);
   }
@@ -28,9 +28,9 @@ export class CounterController implements ReactiveController {
     this.setCounter(this._counter - 1);
   }
 
-  public hostConnected() {
-    console.log('connected');
-  }
+  // eslint-disable-next-line class-methods-use-this
+  public hostConnected() {}
 
+  // eslint-disable-next-line class-methods-use-this
   public hostDisconnected() {}
 }

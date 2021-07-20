@@ -1,7 +1,6 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { CounterController } from './CounterController';
-
+import { CounterController } from './CounterController.js';
 
 @customElement('counter-component')
 export class Counter extends LitElement {
@@ -14,6 +13,7 @@ export class Counter extends LitElement {
     this.name = name;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   onClick() {
     console.log('clicked');
   }
